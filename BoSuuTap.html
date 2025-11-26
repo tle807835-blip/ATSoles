@@ -15,16 +15,16 @@
             <div class="header__logo"><img src="image/Logo.png" alt="ATSoles Logo"></div>
             <nav class="header__nav">
                 <a class="header__link" href="index.html">Trang Chủ</a>
-                <a class="header__link" href="#">Bộ Sưu Tập</a>
-                <a class="header__link" href="#">Sản Phẩm Thịnh Hành</a>
+                <a class="header__link__home" href="#">Bộ Sưu Tập</a>
             </nav>
             <div class="header__search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <input type="text" id="search" placeholder="Tìm kiếm sản phẩm...">
+                <div class="product__list"></div>
             </div>
             <div class="header__icons">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-user"></i>
+                <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="Login.html"><i class="fa-solid fa-user"></i></a>
             </div>
         </div>
     </header>
@@ -33,16 +33,12 @@
     <section class="hero">
         <div class="container">
             <div class="hero__HD">
-                <p>Trang Chủ</p>
-                <i class="fa-solid fa-arrow-right"></i>
+                <a href="index.html">Trang Chủ</a>
+                <i class="fa-solid fa-chevron-up"></i>
                 <strong>Bộ Sưu Tập</strong>
             </div>
             <h2 class="hero__title">Bộ Sưu Tập ATSOLES</h2>
             <p class="hero__subtitle">Khám phá thế giới giày dép với hơn 500+ mẫu thiết kế độc đáo, kết hợp phong cách hiện đại với xu hướng thời trang quốc tế. </p>
-            <div class="hero__button">
-                <button class="findproduct"><i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm sản phẩm....</button>
-                <button class="findimage"><i class="fa-regular fa-camera"></i>Tìm kiếm bằng hình ảnh</button>
-            </div>
         </div>
     </section>
 
@@ -53,103 +49,29 @@
                 <div class="filter">
                     <div class="resets">
                         <h3>Bộ Lọc</h3>
-                        <div class="reset">Đặt lại <i class="fa-solid fa-rotate"></i></div>
+                        <a class="reset" href="#">Đặt lại <i class="fa-solid fa-rotate"></i></a>
                     </div>
                     <div class="catalog">
                         <h4>Danh Mục</h4>
-                        <input type="checkbox"> <label>Giày Thời Trang</label><br>
-                        <input type="checkbox"> <label>Giày Sneaker</label><br>
-                        <input type="checkbox"> <label>Giày Công Sở</label>
+                        <label><input type="checkbox" name="category" value="thoitrang"> Giày Thời Trang</label><br>
+                        <label><input type="checkbox" name="category" value="sneaker"> Giày Sneaker</label><br>
+                        <label><input type="checkbox" name="category" value="congso"> Giày Công Sở</label>
                     </div>
                     <div class="catalog">
                         <h4>Đơn Giá</h4>
-                        <input type="radio"> <label>Giày Thời Trang</label><br>
-                        <input type="radio"> <label>Giày Sneaker</label><br>
-                        <input type="radio"> <label>Giày Công Sở</label>
+                        <label><input type="radio" name="price" value="duoi200"> Dưới 200.000đ</label><br>
+                        <label><input type="radio" name="price" value="200-500"> 200.000đ - 500.000đ</label><br>
+                        <label><input type="radio" name="price" value="tren500"> Trên 500.000đ</label>
+                    </div>
+                    <div class="submit">
+                        <button>Xác nhận</button>
                     </div>
                 </div>
                 
                 <div class="product__head">
-                    <div class="product__sp">
-                        <div class="product-card">
-                            <img src="image/Sneaker.png" alt="">
-                            <h3 class="product-card__name">Platform Sneakers</h3>
-                            <p class="product-card__desc">Giày Sneaker Hiện Đại Phong Cách Hàn Quốc</p>
-                            <div class="product-card__info">
-                                <span class="product-card__price">178.000đ</span>
-                                <span class="product-card__rating">★ 4.8 (190)</span>
-                            </div>
-                            <a href="#" class="product-card__link">Xem Chi Tiết <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    
-                        <div class="product-card">
-                            <img src="image/Sneaker.png" alt="">
-                            <h3 class="product-card__name">Platform Sneakers</h3>
-                            <p class="product-card__desc">Giày Sneaker Hiện Đại Phong Cách Hàn Quốc</p>
-                            <div class="product-card__info">
-                                <span class="product-card__price">178.000đ</span>
-                                <span class="product-card__rating">★ 4.8 (190)</span>
-                            </div>
-                            <a href="#" class="product-card__link">Xem Chi Tiết <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    
-                        <div class="product-card">
-                            <img src="image/Sneaker.png" alt="">
-                            <h3 class="product-card__name">Platform Sneakers</h3>
-                            <p class="product-card__desc">Giày Sneaker Hiện Đại Phong Cách Hàn Quốc</p>
-                            <div class="product-card__info">
-                                <span class="product-card__price">178.000đ</span>
-                                <span class="product-card__rating">★ 4.8 (190)</span>
-                            </div>
-                            <a href="#" class="product-card__link">Xem Chi Tiết <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="product__sp">
-                        <div class="product-card">
-                            <img src="image/Sneaker.png" alt="">
-                            <h3 class="product-card__name">Platform Sneakers</h3>
-                            <p class="product-card__desc">Giày Sneaker Hiện Đại Phong Cách Hàn Quốc</p>
-                            <div class="product-card__info">
-                                <span class="product-card__price">178.000đ</span>
-                                <span class="product-card__rating">★ 4.8 (190)</span>
-                            </div>
-                            <a href="#" class="product-card__link">Xem Chi Tiết <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    
-                        <div class="product-card">
-                            <img src="image/Sneaker.png" alt="">
-                            <h3 class="product-card__name">Platform Sneakers</h3>
-                            <p class="product-card__desc">Giày Sneaker Hiện Đại Phong Cách Hàn Quốc</p>
-                            <div class="product-card__info">
-                                <span class="product-card__price">178.000đ</span>
-                                <span class="product-card__rating">★ 4.8 (190)</span>
-                            </div>
-                            <a href="#" class="product-card__link">Xem Chi Tiết <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    
-                        <div class="product-card">
-                            <img src="image/Sneaker.png" alt="">
-                            <h3 class="product-card__name">Platform Sneakers</h3>
-                            <p class="product-card__desc">Giày Sneaker Hiện Đại Phong Cách Hàn Quốc</p>
-                            <div class="product-card__info">
-                                <span class="product-card__price">178.000đ</span>
-                                <span class="product-card__rating">★ 4.8 (190)</span>
-                            </div>
-                            <a href="#" class="product-card__link">Xem Chi Tiết <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="page">
-                        <a href="" class="left"><i class="fa-solid fa-chevron-up"></i></a>
-                        <a href="" class="page_1">1</a>
-                        <a href="">2</a>
-                        <a href="">3</a>
-                        <a href="">...</a>
-                        <a href="">20</a>
-                        <a href="" class="right"><i class="fa-solid fa-chevron-up"></i></a>
-                    </div>
-                </div>
+                    <div class="product__sp"></div>
+                        
+                    <div class="page"></div>
             </div>
         </div>
     </div>   
@@ -202,5 +124,347 @@
             </div>
         </div>
     </footer>
+
+        ...
+    </footer>
+
+    <div id="login" class="notice">
+        <div class="not__login">
+            <h3>Bạn chưa đăng nhập</h3>
+            <p>Hãy đăng nhập hoặc đăng ký để thêm sản phẩm vào giỏ hàng.</p>
+            <div class="login__signup">
+                <button id="loginn">Đăng nhập</button>
+                <button id="signup">Đăng ký</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const PRODUCTS_PER_PAGE = 6;
+            let currentPage = 1;
+
+            // List sản phẩm
+            const allProducts = [
+                { 
+                    name: "Platform Sneakers", 
+                    category: "sneaker", 
+                    price: 178000, 
+                    desc: "Giày Sneaker Phong Cách Hàn Quốc", 
+                    img: "image/Sneaker.png",
+                    images: ["image/Sneaker.png", "image/Sneaker1.png", "image/Sneaker2.png"]
+                },
+                { 
+                    name: "Office Shoes", 
+                    category: "congso", 
+                    price: 520000, 
+                    desc: "Giày công sở cao cấp", 
+                    img: "image/Office Shoes.webp",
+                    images: ["image/Office Shoes.webp", "image/Office Shoes1.webp", "image/Office Shoes2.webp"]
+                },
+                { 
+                    name: "Fashion Heels", 
+                    category: "thoitrang", 
+                    price: 460000, 
+                    desc: "Giày thời trang nữ thanh lịch", 
+                    img: "image/Fashion Heels.webp",
+                    images: ["image/Fashion Heels.webp", "image/Fashion Heels1.webp", "image/Fashion Heels2.webp"]
+                },
+                { 
+                    name: "New Balance 530", 
+                    category: "sneaker", 
+                    price: 1460000, 
+                    desc: " Giày NewBalance 530 Phối Đồ Cực Đẹp Full Size", 
+                    img: "image/New Balance.webp",
+                    images: ["image/New Balance.webp", "image/New Balance1.webp", "image/New Balance2.webp"]
+                },
+                { 
+                    name: "Giày Vải Canvas ", 
+                    category: "thoitrang", 
+                    price: 118000, 
+                    desc: "Giày vải canvas nam nữ kiểu dáng thiết kế bassic, đẹp mắt", 
+                    img: "image/Canvas.webp",
+                    images: ["image/Canvas.webp", "image/Canvas1.webp", "image/Canvas2.webp"]
+                },
+                { 
+                    name: "Giày Nam Store M192", 
+                    category: "sneaker", 
+                    price: 179000, 
+                    desc: "Giày nam phong cách Hàn Quốc hợp thời trang dành cho sinh viên", 
+                    img: "image/Store.webp",
+                    images: ["image/Store.webp", "image/Store1.webp", "image/Store2.webp"]
+                },
+                { 
+                    name: "Giày Bốt Martin Nam", 
+                    category: "congso", 
+                    price: 189000, 
+                    desc: "Giày Boot Công Sở Cổ Thấp Phong Cách Đường Phố Kiểu Dáng Thời Trang", 
+                    img: "image/Martin.webp",
+                    images: ["image/Martin.webp", "image/Martin1.webp", "image/Martin2.webp"]
+                },
+                { 
+                    name: "Giày Công Sở Oxford", 
+                    category: "congso", 
+                    price: 259000, 
+                    desc: "Giày Công Sở Tăng Chiều Cao Nam", 
+                    img: "image/Oxford.webp",
+                    images: ["image/Oxford.webp", "image/Oxford1.webp", "image/Oxford2.webp"]
+                },
+                { 
+                    name: "Giày Cao Gót Công Sở ", 
+                    category: "congso", 
+                    price: 294000, 
+                    desc: "Giày Công Sở Đế Mềm Giày Giữa Gót Nữ Thoải Mái", 
+                    img: "image/Cao Gót CS.webp",
+                    images: ["image/Cao Gót CS.webp", "image/Cao Gót CS1.webp", "image/Cao Gót CS2.webp"]
+                },
+                { 
+                    name: "Giày Converse Cổ Cao", 
+                    category: "thoitrang", 
+                    price: 514000, 
+                    desc: "Giày Converse Cổ Cao, Giày Converse Chuck 1970s nam nữ cao cấp full size", 
+                    img: "image/Converse.webp",
+                    images: ["image/Converse.webp", "image/Converse1.webp", "image/Converse2.webp"]
+                },
+                { 
+                    name: "Giày đốc da nữ", 
+                    category: "thoitrang", 
+                    price: 699000, 
+                    desc: "Giày đốc da nữ kiểu dáng dễ thương", 
+                    img: "image/Đốc Da.webp",
+                    images: ["image/Đốc Da.webp", "image/Đốc Da1.webp", "image/Đốc Da.webp"]
+                },
+                { 
+                    name: "Giày MaryJane", 
+                    category: "thoitrang", 
+                    price: 142000, 
+                    desc: "Giày đốc da nữ kiểu dáng dễ Giày MaryJane 2 Quai Khóa Cài Da Bóng Sang Chảnh Đế Cao", 
+                    img: "image/MaryJane.webp",
+                    images: ["image/MaryJane.webp", "image/MaryJane1.webp", "image/MaryJane2.webp"]
+                },
+                { 
+                    name: "Giày thể thao Ladies", 
+                    category: "sneaker", 
+                    price: 152000, 
+                    desc: "Thời trang nhẹ và thoáng khí Chống trượt và chống mài mòn", 
+                    img: "image/Ladies.webp",
+                    images: ["image/Ladies.webp", "image/Ladies1.webp", "image/Ladies2.webp"]
+                },
+                { 
+                    name: "Giày Sandal Nữ", 
+                    category: "thoitrang", 
+                    price: 199000, 
+                    desc: " Giày Sandal Nữ Quai Ngang Chéo Trẻ Trung Năng Động", 
+                    img: "image/Sandal.webp",
+                    images: ["image/Sandal.webp", "image/Sandal1.webp", "image/Sandal2.webp"]
+                }
+            ];
+            
+            // Lọc theo mục ở home
+            const collectionFilter = localStorage.getItem("collectionFilter");
+            if (collectionFilter) {
+                const autoFilter = {
+                    categories: [collectionFilter],
+                    price: ""
+                };
+                localStorage.setItem("filters", JSON.stringify(autoFilter));
+            
+                const cb = document.querySelector(
+                    `input[name="category"][value="${collectionFilter}"]`
+                );
+                if (cb) cb.checked = true;
+            
+                localStorage.removeItem("collectionFilter");
+            }
+        
+            // Dom
+            const productContainer = document.querySelector(".product__sp");
+            const pagination = document.querySelector(".page");
+            const filterButton = document.querySelector(".submit button");
+            const resetButton = document.querySelector(".reset");
+            const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+            const priceRadios = document.querySelectorAll('input[name="price"]');
+        
+            // Card sản phẩm
+            function createProductCard(product) {
+                return `
+                <div class="product-card"
+                    data-name="${product.name}"
+                    data-price="${product.price}"
+                    data-desc="${product.desc}"
+                    data-images='${JSON.stringify(product.images)}'>
+            
+                    <img src="${product.img}" alt="${product.name}">
+                    <h3 class="product-card__name">${product.name}</h3>
+                    <p class="product-card__desc">${product.desc}</p>
+            
+                    <div class="product-card__info">
+                        <span class="product-card__price">${product.price.toLocaleString()}đ</span>
+                        <span class="product-card__rating">★ 4.8 (190)</span>
+                    </div>
+                
+                    <a href="#" class="product-card__link">
+                        Xem Chi Tiết <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>`;
+            }
+        
+            // Bộ lọc
+            function getFilteredProducts() {
+                const filters = JSON.parse(localStorage.getItem("filters") || "{}");
+                const selectedCate = filters.categories || [];
+                const selectedPrice = filters.price || "";
+            
+                return allProducts.filter(p => {
+                    let cm = selectedCate.length === 0 || selectedCate.includes(p.category);
+                    let pm = true;
+                
+                    if (selectedPrice === "duoi200") pm = p.price < 200000;
+                    if (selectedPrice === "200-500") pm = p.price >= 200000 && p.price <= 500000;
+                    if (selectedPrice === "tren500") pm = p.price > 500000;
+                
+                    return cm && pm;
+                });
+            }
+        
+            // Render sản phẩm có phân trang
+            function renderProducts(page = 1) {
+                const filtered = getFilteredProducts();
+            
+                const start = (page - 1) * PRODUCTS_PER_PAGE;
+                const end = start + PRODUCTS_PER_PAGE;
+                const pageProducts = filtered.slice(start, end);
+            
+                productContainer.innerHTML = pageProducts.map(createProductCard).join("");
+            
+                const totalPages = Math.ceil(filtered.length / PRODUCTS_PER_PAGE);
+            
+                pagination.innerHTML = totalPages > 1 ? `
+                    <a href="#" class="left"><i class="fa-solid fa-chevron-left"></i></a>
+            
+                    ${Array.from({ length: totalPages }, (_, i) => `
+                        <a href="#" 
+                           class="page-num ${i + 1 === page ? "active" : ""}" 
+                           data-page="${i + 1}">
+                           ${i + 1}
+                        </a>
+                    `).join("")}
+                    
+                    <a href="#" class="right"><i class="fa-solid fa-chevron-right"></i></a>
+                ` : "";
+                    
+                attachPaginationEvents(totalPages);
+                attachProductClickEvents();
+            }
+        
+            // Click sản phẩm → Product.html
+            function attachProductClickEvents() {
+                document.querySelectorAll(".product-card").forEach(card => {
+                    card.addEventListener("click", e => {
+                        e.preventDefault();
+                    
+                        const isLoggedIn = localStorage.getItem("isLoggedIn");
+                        const popup = document.getElementById("login");
+                        const goLogin = document.getElementById("loginn");
+                        const goRegister = document.getElementById("signup");
+                    
+                        // Nếu chưa đăng nhập → mở popup
+                        if (!isLoggedIn) {
+                            popup.style.display = "flex";
+                        
+                            goLogin.onclick = () => window.location.href = "Login.html";
+                            goRegister.onclick = () => window.location.href = "Register.html";
+                        
+                            return; // CHẶN không cho qua Product.html
+                        }
+                    
+                        // Đã đăng nhập → cho xem chi tiết
+                        const product = allProducts.find(p => p.name === card.dataset.name);
+                        localStorage.setItem("selectedProduct", JSON.stringify(product));
+                    
+                        window.location.href = "Product.html";
+                    });
+                });
+            }
+
+            document.getElementById("login").addEventListener("click", function(e){
+                if (e.target.id === "login") {
+                    this.style.display = "none";
+                }
+            });
+
+        
+            // Click các trang
+            function attachPaginationEvents(totalPages) {
+                const left = document.querySelector(".left");
+                const right = document.querySelector(".right");
+                const pageButtons = document.querySelectorAll(".page-num");
+            
+                if (left) {
+                    left.onclick = e => {
+                        e.preventDefault();
+                        if (currentPage > 1) {
+                            currentPage--;
+                            renderProducts(currentPage);
+                        }
+                    };
+                }
+            
+                if (right) {
+                    right.onclick = e => {
+                        e.preventDefault();
+                        if (currentPage < totalPages) {
+                            currentPage++;
+                            renderProducts(currentPage);
+                        }
+                    };
+                }
+            
+                pageButtons.forEach(btn => {
+                    btn.onclick = e => {
+                        e.preventDefault();
+                        const page = parseInt(btn.dataset.page);
+                        currentPage = page;
+                        renderProducts(page);
+                    };
+                });
+            }
+        
+            // Xác nhận lọc
+            filterButton.addEventListener("click", () => {
+                const selectedCate = Array.from(categoryCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+            
+                const selectedPrice = Array.from(priceRadios)
+                    .find(rb => rb.checked)?.value || "";
+            
+                localStorage.setItem("filters", JSON.stringify({
+                    categories: selectedCate,
+                    price: selectedPrice
+                }));
+            
+                currentPage = 1;
+                renderProducts();
+            });
+        
+            // Reset
+            resetButton.addEventListener("click", e => {
+                e.preventDefault();
+            
+                categoryCheckboxes.forEach(cb => cb.checked = false);
+                priceRadios.forEach(rb => rb.checked = false);
+            
+                localStorage.removeItem("filters");
+            
+                currentPage = 1;
+                renderProducts();
+            });
+        
+            renderProducts();
+        });
+    </script>
+    <script src="JS/Search.js"></script>
+    <script src="JS/XuLyDangNhap.js"></script>
 </body>     
 </html>     

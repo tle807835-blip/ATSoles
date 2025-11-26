@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký</title>
+  <link rel="stylesheet" href="css/Signup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="icon_check"><i class="fa-solid fa-circle-check"></i></div>
+        <h2>Đăng ký</h2>
+        <label>Tên người dùng</label>
+        <input id="regUsername" type="text" placeholder="Nhập tên người dùng của bạn">
+
+        <label>Email</label>
+        <input id="regEmail" type="email" placeholder="Nhập email của bạn">
+
+        <label>Mật khẩu</label>
+        <div class="password_box">
+            <input id="regPassword" type="password" placeholder="Nhập mật khẩu của bạn">
+            <i class="fa-regular fa-eye"></i>
+        </div>
+
+        <label>Xác nhận mật khẩu</label>
+        <div class="password_box">
+            <input id="regConfirmPassword" type="password" placeholder="Nhập lại mật khẩu của bạn">
+            <i class="fa-regular fa-eye"></i>
+        </div>
+        <p id="message" class="message"></p>
+
+        <div class="checkbox">
+            <input type="checkbox" id="agree">
+            <label for="agree">Tôi đồng ý với các <a href="#">điều khoản dịch vụ</a></label>
+        </div>
+
+        <button class="btn_register" id="btnRegister">Đăng ký</button>
+        <div class="divider"><span>Hoặc đăng ký với</span></div>
+        <button class="btn_social"><i class="fa-brands fa-google"></i>Tiếp tục với Google</button>
+        <p class="signin">Đã có tài khoản? <a href="Login.html">Đăng nhập</a></p>
+    </div>
+
+    <script src="JS/TaiKhoan.js"></script>
+</body>
+</html>

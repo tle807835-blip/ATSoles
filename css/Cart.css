@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CONTAINER */
+.container, 
+.header__container, 
+.hero__container, 
+.collection__container, 
+.trending__container, 
+.testimonials__container, 
+.newsletter__container, 
+.footer__container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px #00000010;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+
+.header__nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header__link__home{
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+  border-bottom: 2px solid #000;
+
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 6px 10px;
+  border-radius: 10px;
+  gap: 8px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header__search input {
+  border: none;
+  background: transparent;
+  padding-right: 200px;
+}
+
+.header__icons i {
+  font-size: 18px;
+  margin-left: 15px;
+  color: #000;
+}
+
+/* CART */
+
+/*Giỏ hàng khi trống*/
+.empty__cart {
+  text-align: center;
+  margin-top: 50px;
+  width: 1200px;
+}
+
+.empty__cart .text p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.empty__cart a {
+  text-decoration: none;
+  padding: 10px 50px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+}
+/*Giỏ hàng có sản phẩm*/
+
+.cart__setion{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0px;
+}
+
+.product{
+  display: flex;
+  border: 1px solid  rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+  width: 900px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.cart__info{
+  display: flex;
+}
+
+.cart__info img{
+  width: 200px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.cart__info h2{
+  padding: 28px 0px;
+}
+
+.cart__info p{
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+}
+
+.cart__info button{
+  margin-top: 25px;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.cart__qty button{
+  font-size: 15px;
+  margin: 15px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: red;
+}
+
+.cart__info div{
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.summary{
+  width: 270px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.summary p{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.summary button{
+  width: 100%;
+  height: 35px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 50px 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.newsletter__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.newsletter__desc {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 10px 0 30px;
+}
+
+.newsletter__form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter__form input {
+  width: 330px;
+  height: 44px;
+  border-radius: 10px;
+  padding-left: 15px;
+  margin-right: 15px;
+  border: none;
+}
+
+.newsletter__button {
+  width: 105px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.footer__about {
+  width: 260px;
+}
+
+.footer__socials {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer__socials i {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.footer__help a,
+.footer__links a {
+  display: block;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.footer__bottom {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: end;
+  padding-bottom: 20px;
+}
+footer.footer {
+  margin-top: auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+
+  .container,
+  .header__container,
+  .newsletter__container,
+  .footer__container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .cart__setion {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  .summary {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .empty__cart {
+    width: 100%;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .cart__setion {
+    flex-direction: column;
+  }
+
+  .product {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cart__info {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .cart__info img {
+    width: 150px;
+  }
+
+  .summary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cart__setion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .cart__info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart__info div {
+    margin-left: 0;
+  }
+
+  .cart__info img {
+    width: 200px;
+    margin: auto;
+  }
+
+  .summary {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__bottom {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .header__search input {
+    padding-right: 20px;
+  }
+
+  .cart__info img {
+    width: 150px;
+  }
+
+  .product {
+    padding: 10px;
+  }
+
+  .cart__info h2 {
+    font-size: 22px;
+  }
+
+  .cart__info p {
+    font-size: 16px;
+  }
+
+  .cart__qty button {
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .summary {
+    padding: 15px;
+  }
+
+  .summary p {
+    font-size: 18px;
+  }
+}

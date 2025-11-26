@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart</title>'
+  <link rel="stylesheet" href="css/Cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo"><img src="image/Logo.png" alt="ATSoles Logo"></div>
+            <nav class="header__nav">
+                <a class="header__link__home" href="index.html">Trang Chủ</a>
+                <a class="header__link" href="BoSuuTap.html">Bộ Sưu Tập</a>
+            </nav>
+            <div class="header__search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+            </div>
+            <div class="header__icons">
+                <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="cart">
+        <div class="container">
+            <div class="cart__setion">
+                <div id="cartItems" class="cart__items"></div>
+
+                <div class="summary">
+                    <h2>Tổng kết đơn hàng</h2>
+                    <div><p>Tạm tính: <span id="subtotal">0</span>₫</p></div>
+                    <div><p>Phí vận chuyển: <span id="fee">15₫</span></p></div>
+                    <div><p><b>Tổng cộng: <span id="total">0</span>₫</b></p></div>
+                    <button onclick="window.location.href='index.html'">Đặt Hàng</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter__container">
+            <h2 class="newsletter__title">Đăng Ký Nhận Tin Mới Nhất</h2>
+            <p class="newsletter__desc">Nhận thông tin về bộ sưu tập mới, ưu đãi đặc biệt và xu hướng thời trang giày mới nhất.</p>
+            <div class="newsletter__form">
+                <input type="email" placeholder="Nhập email của bạn...">
+                <button class="newsletter__button">Đăng ký</button>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__about">
+                <img src="image/Logo.png" alt="Logo">
+                <p>Chúng tôi có những bộ quần áo phù hợp với phong cách của bạn...</p>
+                <div class="footer__socials">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+      
+            <div class="footer__links">
+                <h3>L I Ê N K Ế T N H A N H</h3>
+                <a href="#">Trang Chủ</a>
+                <a href="#">Bộ Sưu Tập</a>
+                <a href="#">Sản Phẩm Thịnh Hành</a>
+            </div>
+      
+            <div class="footer__help">
+                <h3>HỔ T R Ợ K H Á C H H À N G </h3>
+                <a href="#">Hỗ Trợ Đối Sách</a>
+                <a href="#">Hướng Dẫn Thanh Toán</a>
+                <a href="#">Vận Chuyển</a>
+                <a href="#">Bảo Hành</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="footer__bottom">
+                © ATSOLES 2025, All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const orderBtn = document.querySelector(".summary button");
+            const cartContainer = document.getElementById("cartItems");
+            const subtotalBox = document.getElementById("subtotal");
+            const totalBox = document.getElementById("total");
+            const fee = 15;
+        
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let subtotal = 0;
+        
+            // Render
+            if (cart.length === 0) {
+                cartContainer.innerHTML = `
+                    <div class="empty__cart">
+                        <div class="text">
+                            <h2>Giỏ hàng của bạn đang trống</h2>
+                            <p>Phải thêm sản phẩm vào giỏ hàng trước khi bạn tiến hành thanh toán</p>
+                            <a href="index.html">Đi đến Cửa hàng</a>
+                        </div>
+                    </div>`;
+                document.querySelector(".summary").style.display = "none";
+                document.querySelector(".newsletter").style.marginTop = "100px";
+            } else {
+                cart.forEach((item, index) => {
+                    subtotal += item.price * item.quantity;
+                    const div = document.createElement("div");
+                    div.className = "cart__item";
+                    div.innerHTML = `
+                        <div class="product">
+                            <div class="cart__info">
+                                <img src="${item.image}" alt="${item.name}">
+                                <div>
+                                    <h2>${item.name}</h2>
+                                    <p>Size: ${item.size}</p>
+                                    <p>Giá: ${item.price}₫</p>
+                                    <button onclick="updateQty(${index}, -1)">-</button>
+                                    <span>${item.quantity}</span>
+                                    <button onclick="updateQty(${index}, 1)">+</button>
+                                </div>
+                            </div>
+                            <div class="cart__qty">
+                                <button onclick="removeItem(${index})" class="delete-btn">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>`;
+                    cartContainer.appendChild(div);
+                });
+            
+                subtotalBox.textContent = subtotal;
+                totalBox.textContent = subtotal + fee;
+            }
+        
+            // Gán sự kiện đặt hàng
+            if (orderBtn) {
+                orderBtn.addEventListener("click", e => {
+                    e.preventDefault();
+                
+                    const isLoggedIn = localStorage.getItem("isLoggedIn");
+                    if (!isLoggedIn) {
+                        alert("Vui lòng đăng nhập để đặt hàng!");
+                        window.location.href = "Login.html";
+                        return;
+                    }
+                
+                    if (cart.length === 0) {
+                        alert("Giỏ hàng đang trống!");
+                        return;
+                    }
+                
+                    // 1. Thông báo thành công
+                    alert("Đặt hàng thành công!");
+                
+                    // 2. Xóa cart
+                    localStorage.removeItem("cart");
+                
+                    // 3. Xóa UI sản phẩm
+                    if (cartContainer) cartContainer.innerHTML = "";
+                
+                    // 4. Reset tiền
+                    if (subtotalBox) subtotalBox.textContent = "0";
+                    if (totalBox) totalBox.textContent = "0";
+                });
+            }
+        
+        });
+
+        // 2 hàm bắt buộc để không lỗi click
+        function updateQty(i, change) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            if (cart[i].quantity + change > 0) {
+                cart[i].quantity += change;
+                localStorage.setItem("cart", JSON.stringify(cart));
+                location.reload();
+            }
+        }
+
+        function removeItem(i) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.splice(i, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            location.reload();
+        }
+
+    </script>
+    <script src="JS/Search.js"></script>
+</body>
+</html>

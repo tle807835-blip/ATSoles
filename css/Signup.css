@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  background: #0d0d0d;
+  width: 430px;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.icon_check {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.icon_check i {
+  font-size: 35px;
+  color: #00c8ff;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+label {
+  font-size: 14px;
+  color: #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  border: 1px solid #1d1d1d;
+  border-radius: 10px;
+  margin: 8px 0 18px;
+  color: #ddd;
+  outline: none;
+}
+
+.password_box {
+  position: relative;
+}
+
+.password_box i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.checkbox label {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.checkbox a {
+  color: #00c8ff;
+}
+
+.btn_register {
+  width: 100%;
+  padding: 13px;
+  background: #23abd1;
+  color: #ffffffdc;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.btn_register:hover{
+    background: #00c8ff;
+    color: #fff;
+}
+
+.divider {
+  text-align: center;
+  color: #777;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.divider span {
+  background: #0d0d0d;
+  padding: 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #333;
+}
+
+.btn_social {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid #222;
+  color: #dddddd8f;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn_social:hover{
+    background: rgba(0,0,0,0.8);
+    border: 1px solid #00c8ff5e;
+    color: #fff;
+}
+
+.signin {
+  text-align: center;
+  margin-top: 15px;
+  color: #aaa;
+}
+
+.signin a {
+  color: #00c8ff;
+}
+
+.message{
+  font-size: 13px;
+  margin-bottom: 10px;
+}

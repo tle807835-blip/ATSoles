@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATSoles</title>
+  <link rel="stylesheet" href="css/Product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo"><img src="image/Logo.png" alt="ATSoles Logo"></div>
+            <nav class="header__nav">
+                <a class="header__link__home" href="index.html">Trang Chủ</a>
+                <a class="header__link" href="BoSuuTap.html">Bộ Sưu Tập</a>
+            </nav>
+            <div class="header__search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+            </div>
+            <div class="header__icons">
+                <a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!--Hero Setion-->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__HD">
+                <p>Trang Chủ</p>
+                <i class="fa-solid fa-chevron-up"></i>
+                <p>Bộ Sưu Tập</p>
+                <i class="fa-solid fa-chevron-up"></i>
+                <strong>Sản Phẩm</strong>
+            </div>
+        </div>
+    </section>
+
+    <!--Product-->
+    <setion class="product">
+        <div class="container">
+            <div class="product__sp">
+                <div>
+                    <div class="image">
+                        <img src="image/ÁnhSP.png" alt="">
+                    </div>
+                    <div class="image__three">
+                        <a href=""><img src="image/ÁnhSP.png" alt=""></a>
+                        <a href=""><img src="image/SPNho.png" alt=""></a>
+                        <a href=""><img src="image/SPNhoGT.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="product__card">
+                    <h2 class="product__title">Platform Sneakers</h2>
+                    <p class="subtitle">Giày Sneaker Phong Cách Hàn Quốc</p>
+
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>4.8 (190)</span>
+                    </div>
+                    
+                    <div class="price__setion">
+                        <div class="price">178.000đ</div>
+                        <p class="note">Giá đã bao gồm VAT. Miễn phí vận chuyển cho đơn hàng trên 150.000đ</p>
+                    </div>
+
+                    <div class="size__section">
+                        <div class="size__header">
+                            <span>Chọn size</span>
+                            <a href="#" class="size__guide" onclick="openSizeGuide()">
+                                <i class="fa-solid fa-ruler"></i> Hướng dẫn chọn size
+                            </a>
+                        </div>
+                        <div class="size__list">
+                            <button class="size">38</button>
+                            <button class="size">39</button>
+                            <button class="size">40</button>
+                            <button class="size">41</button>
+                            <button class="size">42</button>
+                            <button class="size">43</button>
+                            <button class="size">44</button>
+                            <button class="size">45</button>
+                            <button class="size">46</button>
+                            <button class="size">47</button>
+                        </div>
+                    </div>
+                
+                    <button class="add__cart">
+                        <i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng
+                    </button>
+                
+                    <div class="section">
+                        <h3>Tùy chọn thanh toán</h3>
+                        <ul>
+                            <li><i style="color: #00b050;" class="fa-solid fa-circle-check"></i> MoMo, ZaloPay, Chuyển khoản</li>
+                            <li><i style="color: #00b050;" class="fa-solid fa-circle-check"></i> Thanh toán khi nhận hàng (COD)</li>
+                        </ul>
+                    </div>
+                
+                    <div class="section">
+                        <h3>Thông tin giao hàng</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-truck"></i> Giao hàng nhanh 2-3 ngày (Hà Nội, TP.HCM)</li>
+                            <li><i class="fa-solid fa-rotate-left"></i> Miễn phí đổi trả trong 7 ngày</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </setion>
+
+    <!-- Trending Products -->
+    <section class="trending">
+        <div class="trending__container">
+            <div class="trending__header">
+                <div>
+                    <h2 class="trending__title">Sản Phẩm Thịnh Hành</h2>
+                    <p class="trending__subtitle">Những đôi giày được yêu thích nhất tuần này</p>
+                </div>
+                <a href="#" class="trending__viewall">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="product">
+        <div class="container">
+            <div class="head">
+                <div class="product__sp"></div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__about">
+                <img src="image/Logo.png" alt="Logo">
+                <p>Chúng tôi có những bộ quần áo phù hợp với phong cách của bạn...</p>
+                <div class="footer__socials">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+      
+            <div class="footer__links">
+                <h3>L I Ê N K Ế T N H A N H</h3>
+                <a href="#">Trang Chủ</a>
+                <a href="#">Bộ Sưu Tập</a>
+                <a href="#">Sản Phẩm Thịnh Hành</a>
+            </div>
+      
+            <div class="footer__help">
+                <h3>HỔ T R Ợ K H Á C H H À N G </h3>
+                <a href="#">Hỗ Trợ Đối Sách</a>
+                <a href="#">Hướng Dẫn Thanh Toán</a>
+                <a href="#">Vận Chuyển</a>
+                <a href="#">Bảo Hành</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="footer__bottom">
+                © ATSOLES 2025, All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div id="sizeSole" class="size">
+        <div class="conduct">
+            <img src="image/SizeGiay.webp" alt="Hướng dẫn chọn size" class="size__giay">
+        </div>
+    </div>
+
+    <script>
+        //Chọn size giày
+        const sizeButtons = document.querySelectorAll(".size");
+        sizeButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                sizeButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+            });
+        });
+    
+        // Đổi ảnh chính khi bấm ảnh nhỏ
+        const mainImage = document.querySelector(".image img");
+        const thumbnails = document.querySelectorAll(".image__three img");
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener("click", (e) => {
+                e.preventDefault();
+                mainImage.src = thumb.src;
+            });
+        });
+    
+        // Thêm vào giỏ hàng
+        const addCartBtn = document.querySelector(".add__cart");
+        addCartBtn.addEventListener("click", () => {
+            const selectedSize = document.querySelector(".size.active");
+            if (!selectedSize) {
+                alert("Vui lòng chọn size trước khi thêm vào giỏ hàng!");
+                return;
+            }
+        
+            const productName = document.querySelector(".product__title").innerText;
+            const priceText = document.querySelector(".price").innerText.replace("đ", "").replace(/\./g, "");
+            const price = parseInt(priceText);
+            const image = document.querySelector(".image img").src;
+            const size = selectedSize.innerText;
+            const color = "Trắng";
+        
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+            const existing = cart.find(item => item.name === productName && item.size === size);
+            if (existing) existing.quantity += 1;
+            else {
+                cart.push({ name: productName, price, image, size, color, quantity: 1 });
+            }
+        
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`ATSoles Đã thêm: ${productName} (Size ${size}) vào giỏ hàng!`);
+        });
+    
+        // Sticky header
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector(".header");
+            header.classList.toggle("sticky", window.scrollY > 50);
+        });
+    
+        // Hiển thị sản phẩm được chọn từ BoSuuTap.html
+        document.addEventListener("DOMContentLoaded", () => {
+            const saved = localStorage.getItem("selectedProduct");
+            if (!saved) return;
+            const product = JSON.parse(saved);
+            
+            document.querySelector(".product__title").textContent = product.name;
+            document.querySelector(".subtitle").textContent = product.desc;
+            document.querySelector(".price").textContent = product.price.toLocaleString("vi-VN") + "đ";
+            document.title = product.name + " | ATSoles";
+            
+            const mainImg = document.querySelector(".image img");
+            const thumbs = document.querySelectorAll(".image__three img");
+            
+            // Cập nhật 3 ảnh nhỏ riêng biệt
+            if (product.images && product.images.length >= 3) {
+                mainImg.src = product.images[0];
+                thumbs.forEach((img, i) => {
+                    if (product.images[i]) img.src = product.images[i];
+                });
+            } else {
+                mainImg.src = product.image;
+                thumbs.forEach(img => img.src = product.image);
+            }
+        
+            // Đổi ảnh lớn khi click
+            thumbs.forEach(img => {
+                img.addEventListener("click", e => {
+                    e.preventDefault();
+                    mainImg.src = img.src;
+                    });
+                });
+        });     
+    </script>
+
+    <script>
+
+        const trendingProducts = [
+            { 
+                name: "Platform Sneakers", 
+                category: "sneaker", 
+                price: 178000, 
+                desc: "Giày Sneaker Phong Cách Hàn Quốc", 
+                img: "image/Sneaker.png",
+                images: ["image/Sneaker.png", "image/Sneaker1.png", "image/Sneaker2.png"]
+            },
+            { 
+                name: "Office Shoes", 
+                category: "congso", 
+                price: 520000, 
+                desc: "Giày công sở cao cấp", 
+                img: "image/Office Shoes.webp",
+                images: ["image/Office Shoes.webp", "image/Office Shoes1.webp", "image/Office Shoes2.webp"]
+            },
+            { 
+                name: "Fashion Heels", 
+                category: "thoitrang", 
+                price: 460000, 
+                desc: "Giày thời trang nữ thanh lịch", 
+                img: "image/Fashion Heels.webp",
+                images: ["image/Fashion Heels.webp", "image/Fashion Heels1.webp", "image/Fashion Heels2.webp"]
+            },
+            { 
+                name: "New Balance 530", 
+                category: "Sneaker", 
+                price: 1460000, 
+                desc: " Giày NewBalance 530 Phối Đồ Cực Đẹp Full Size", 
+                img: "image/New Balance.webp",
+                images: ["image/New Balance.webp", "image/New Balance1.webp", "image/New Balance2.webp"]
+            }
+        ];
+        
+        function renderTrending() {
+            const container = document.querySelector(".trending__container");
+            if (!container) return;
+        
+            let html = `
+                <div class="trending__grid">
+                    ${trendingProducts.map(p => `
+                        <div class="trending__card"
+                            data-product='${JSON.stringify(p)}'>
+                            <img src="${p.img}" alt="${p.name}">
+                            <h3>${p.name}</h3>
+                            <p>${p.desc}</p>
+                            <div class="trending__info">
+                                <span class="trending__price">${p.price.toLocaleString()}đ</span>
+                                <span class="trending__rating">★ 4.8 (190)</span>
+                            </div>
+                            <a href="#" class="trending__link">
+                                Xem Chi Tiết <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    `).join("")}
+                </div>
+            `;
+            
+            container.insertAdjacentHTML("beforeend", html);
+            
+            // Click vào sản phẩm → Product.html
+            document.querySelectorAll(".trending__card").forEach(card => {
+                card.addEventListener("click", () => {
+                    const product = JSON.parse(card.dataset.product);
+                    localStorage.setItem("selectedProduct", JSON.stringify(product));
+                    window.location.href = "Product.html";
+                });
+            });
+        }
+        renderTrending();
+    </script>
+    <script src="JS/XuLyDangNhap.js"></script>
+    <script src="JS/HuongDan.js"></script>
+</body>
+</html>
