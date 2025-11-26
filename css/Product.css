@@ -552,8 +552,9 @@
     gap: 15px;
   }
 
-  .product-card {
+  .trending__card {
     width: 100%;
+    text-align: center;
   }
 }
 
@@ -591,6 +592,7 @@
 
   .footer__container {
     flex-direction: column;
+    text-align: center;
     gap: 20px;
   }
 
