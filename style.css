@@ -81,7 +81,7 @@
   color: #000;
 }
 
-/* LIST PRODUCT*/
+/* PRODUCT*/
 
 .product__list {
   position: absolute;
@@ -461,14 +461,9 @@
 }
 
 /* RESPONSIVE */
-/* IPAD */
 @media (max-width: 900px) {
 
   /* HEADER */
-  .header__nav {
-    display: none;
-  }
-
   .header__container {
     padding: 10px 16px;
   }
@@ -513,26 +508,6 @@
   .container,
   .header__container {
     padding: 0 12px;
-  }
-
-  /* HEADER */
-  .header__icons i {
-    margin-left: 10px;
-  }
-
-  .header__search {
-    width: 100%;
-    padding: 6px;
-  }
-
-  .header__search input {
-    width: 100%;
-    padding: 8px;
-  }
-
-  .product__list {
-    top: 40px;
-    max-height: 200px;
   }
 
   /* HERO */
