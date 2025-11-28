@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lịch sử đơn hàng</title>
+<link rel="stylesheet" href="css/Oders.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo"><img src="image/Logo.png"></div>
+            <nav class="header__nav">
+                <a class="header__link" href="index.html">Trang Chủ</a>
+                <a class="header__link" href="BoSuuTap.html">Bộ Sưu Tập</a>
+                <a class="header__link__home" href="Orders.html">Lịch sử đơn hàng</a> 
+            </nav>
+        </div>
+    </header>
+
+    <main class="history">
+        <div class="container">
+            <h2>Lịch sử đơn hàng của bạn</h2>
+            <div id="orderlist"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__about">
+                <img src="image/Logo.png" alt="Logo">
+                <p>Chúng tôi có những bộ quần áo phù hợp với phong cách của bạn...</p>
+                <div class="footer__socials">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+      
+            <div class="footer__links">
+                <h3>L I Ê N K Ế T N H A N H</h3>
+                <a href="#">Trang Chủ</a>
+                <a href="#">Bộ Sưu Tập</a>
+                <a href="#">Sản Phẩm Thịnh Hành</a>
+            </div>
+      
+            <div class="footer__help">
+                <h3>HỔ T R Ợ K H Á C H H À N G </h3>
+                <a href="#">Hỗ Trợ Đối Sách</a>
+                <a href="#">Hướng Dẫn Thanh Toán</a>
+                <a href="#">Vận Chuyển</a>
+                <a href="#">Bảo Hành</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    
+        <div class="container">
+            <div class="footer__bottom">
+                © ATSOLES 2025, All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const box = document.getElementById("orderlist");
+            const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+            if (orders.length === 0) {
+                box.innerHTML = `<p class="empty">Bạn chưa có đơn hàng nào.</p>`;
+                return;
+            }
+
+            orders.reverse().forEach(order => {
+                const div = document.createElement("div");
+                div.className = "order";
+                div.innerHTML = `
+                    <div class="order__header">
+                        <p class="id">Mã đơn: ${order.id}</p>
+                        <p class="date">Ngày đặt: ${order.date}</p>
+                        <p class="sum">Tổng tiền: <b>${order.total.toLocaleString("vi-VN")}₫</b></p>
+                    </div>
+                    <div class="order__items">
+                        ${order.items.map(i => `
+                            <div class="item">
+                                <img src="${i.image}">
+                                <div class="info">
+                                    <h4>${i.name}</h4>
+                                    <p>Size: ${i.size}</p>
+                                    <p>Số lượng: ${i.quantity}</p>
+                                    <p>Giá: ${i.price.toLocaleString("vi-VN")}₫</p>
+                                </div>
+                            </div>
+                        `).join("")}
+                    </div>
+                `;
+                box.appendChild(div);
+            });
+        });
+    </script>
+
+</body>
+</html>
