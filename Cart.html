@@ -14,8 +14,9 @@
         <div class="header__container">
             <div class="header__logo"><img src="image/Logo.png" alt="ATSoles Logo"></div>
             <nav class="header__nav">
-                <a class="header__link__home" href="index.html">Trang Chủ</a>
-                <a class="header__link" href="BoSuuTap.html">Bộ Sưu Tập</a>
+                <a class="header__link" href="index.html">Trang Chủ</a>
+                <a class="header__link__home" href="BoSuuTap.html">Bộ Sưu Tập</a>
+                <a class="header__link" href="Oders.html">Lịch sử đơn hàng</a>
             </nav>
             <div class="header__search">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -167,16 +168,34 @@
                         return;
                     }
                 
-                    // 1. Thông báo thành công
+                    // Thông báo thành công
                     alert("Đặt hàng thành công!");
-                
-                    // 2. Xóa cart
+
+                    // Lấy danh sách orders cũ
+                    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+                    // Tạo đơn hàng mới
+                    const newOrder = {
+                        id: "DH" + Date.now(), 
+                        date: new Date().toLocaleString("vi-VN"),
+                        items: cart,
+                        subtotal: subtotal,
+                        fee: fee,
+                        total: subtotal + fee
+                    };
+
+                    // Lưu đơn vào lịch sử
+                    orders.push(newOrder);
+                    localStorage.setItem("orders", JSON.stringify(orders));
+
+                    // Xóa giỏ hàng sau khi đặt
                     localStorage.removeItem("cart");
+                    location.reload();
                 
-                    // 3. Xóa UI sản phẩm
+                    // Xóa UI sản phẩm
                     if (cartContainer) cartContainer.innerHTML = "";
                 
-                    // 4. Reset tiền
+                    // Reset tiền
                     if (subtotalBox) subtotalBox.textContent = "0";
                     if (totalBox) totalBox.textContent = "0";
                 });
